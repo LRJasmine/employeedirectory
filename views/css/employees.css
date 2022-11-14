@@ -1,0 +1,163 @@
+.employeedirContainer {
+  margin: 5%;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #adbdc9;
+}
+.dirHeader {
+  background-color: #1d2b36;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+  margin: -1.5% -1.5% 10px -1.5%;
+}
+.dirHeader h1 {
+  margin: 0;
+}
+
+#employeeicon {
+  padding-left: 20px;
+  max-height: 70px;
+  max-width: 70px;
+}
+
+.addNewEmp {
+  float: right;
+  background-color: #90cdfc;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.addNewEmp:hover{
+  border: solid #6fa7d1 1px;
+  background-color: #41749c;
+  color: #ffffff;
+} 
+
+.employeetable thead {
+  border: solid 5px #a9c5db;
+  border-radius: 20px;
+  background-color: #325a78;
+  color: #ffffff;
+}
+.employeetable thead td{
+  font-weight: bold;
+  text-align: center;
+}
+
+.editEmp {
+  background-color: #278ddb;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.editEmp:hover {
+  background-color: #1c5a8a;
+  color: #ffffff;
+  font-weight: bold;
+}
+.deleteEmp {
+  background-color: #bd4444;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.deleteEmp:hover {
+  background-color: #9c0e0e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#employeeslist tr td {
+  text-align: center;
+}
+.empNoKey {
+  font-weight: bold;
+}
+
+.menucontainer {
+  margin-top: 20px;
+  align-self: center;
+}
+.menubtns {
+  background-color: #90cdfc;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.menubtns:hover{
+  border: solid #6fa7d1 1px;
+  background-color: #41749c;
+  color: #ffffff;
+}
+
+.addEmpPage {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+}
+.newEmpContainer {
+  margin: 2%;
+  padding: 2%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #adbdc9;
+  max-width: 600px;
+}
+
+#addNewEmpForm, #editEmpForm label {
+  font-weight: bold;
+  font-size: 20px;
+}
+#addNewEmpForm input, #addNewEmpForm select, 
+#editEmpForm input, #editEmpForm select {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  color: #000000;
+}
+.formFields {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.formFields input{
+  display: block;
+}
+.submitEmp {
+  padding: 10px 20px;
+  background-color: #30a32e;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+.submitEmp:hover {
+  background-color: #134512;
+  color: #ffffff;
+}
+
+.formfooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelUpdate {
+  padding: 10px 20px;
+  background-color: #bd4444;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}

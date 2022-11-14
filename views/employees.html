@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Raxan Employee Directory</title>
+    <link href="raxan/ui/css/master.css" rel="stylesheet" type="text/css" />
+    <link href="views/css/employees.css" rel="stylesheet" type="text/css" />
+    <link href="raxan/ui/css/default/theme.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="flashmsg"></div>
+    <div class="newEmpContainer hide" id="editEmpFormContainer" xt-autoupdate="true">
+      <form name="editEmpForm" action="editEmployee" method="post" id="editEmpForm">
+        <div class="formFields">
+          <div>
+            <label for="editfirstname">First Name</label>
+            <input type="text" name="editfirstname" id="editfirstname">
+          </div>
+          <div>
+            <label for="editlastname">Last Name</label>
+            <input type="text" name="editlastname" id="editlastname">
+          </div>
+        </div>
+        <div class="formFields">
+          <div>
+            <label for="editemployeenum">Employee Number</label>
+            <input type="number" name="editemployeenum" id="editemployeenum" class="disabled" readonly>
+          </div>
+          <div>
+            <label for="editgender">Gender</label>
+            <select name="editgender" id="editgender">
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+          </div>
+          <div>
+            <label for="editbirthdate">Date of Birth</label>
+            <input type="date" name="editbirthdate" id="editbirthdate">
+          </div>
+        </div>
+        <div class="formfooter">
+          <button type="submit" id="editEmp" xt-bind="click, updateEmployee" class="submitEmp">Update Employee</button>
+          <button type="submit" id="canceleditEmp" xt-bind="click, cancelupdateEmployee" class="cancelUpdate">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <div class="employeedirContainer">
+        <div class="dirHeader">
+          <img src="views/images/employees.svg" alt="Employees Icon" id="employeeicon">
+          <h1>Employee Directory</h1>
+        </div>
+        <div>
+          <div>
+            <button class="addNewEmp" xt-bind="#click, goToNewEmpForm">Add New Employee</button>
+          </div>
+          <table class="employeetable">
+            <thead>
+              <td>&nbsp;</td>
+              <td>Emp #</td>
+              <td>Name</td>
+              <td>Gender</td>
+              <td>Birth Date</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </thead>
+            <tbody id="employeeslist" xt-autoupdate="true">
+              <tr class="{ROWCLASS}">
+              <!-- <tr class="{ROWCLASS}" data-event-value="{empNum}" xt-delegate="button.deleteEmp #click, deleteEmployee"> -->
+              <!-- <tr class="{ROWCLASS}" xt-delegate="td button.deleteEmp #click, deleteEmployee"> -->
+                <td>{ROWCOUNT}</td>
+                <td class="empNoKey">{empNum}</td>
+                <td>{empName}</td>
+                <td>{gender}</td>
+                <td>{birthDate}</td>
+                <td>
+                  <button class="editEmp" data-event-value="{empNum}">Edit</button>
+                </td>
+                <td>
+                  <button 
+                    class="deleteEmp"
+                    data-event-value="{empNum}"
+                    data-event-confirm="Are you sure you want to delete this record?"
+                  >Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

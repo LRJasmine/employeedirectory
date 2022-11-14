@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Raxan Employee Directory</title>
+    <link href="raxan/ui/css/master.css" rel="stylesheet" type="text/css" />
+    <link href="views/css/employees.css" rel="stylesheet" type="text/css" />
+    <link href="raxan/ui/css/default/theme.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="addEmpPage">
+    <div class="flashmsg"></div>
+    <div class="menucontainer">
+      <button class="menubtns" xt-bind="#click, returnDir">Return To Directory</button>
+    </div>
+    <div class="newEmpContainer">
+      <p id="forminfo"></p>
+      <form name="addNewEmpForm" action="addNewEmployee" method="post" id="addNewEmpForm">
+        <div class="formFields">
+          <div>
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" required>
+          </div>
+          <div>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" required>
+          </div>
+        </div>
+        <div class="formFields">
+          <div>
+            <label for="employeenum">Employee Number</label>
+            <input type="number" name="employeenum" id="employeenum" required>
+          </div>
+          <div>
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" required>
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+          </div>
+          <div>
+            <label for="birthdate">Date of Birth</label>
+            <input type="date" name="birthdate" id="birthdate" required>
+          </div>
+        </div>
+        <div>
+          <button type="submit" id="submitNewEmp" xt-bind="click, addNewEmployee" class="submitEmp">Add New Employee</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
