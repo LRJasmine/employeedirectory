@@ -9,7 +9,7 @@ This is an employee directory with the ability to view all employees in a table 
 ###### Update Employee
 
 ## Preview
-![Raxan Employee Directory](employeedirectory\RaxanEmployeeDirPreview.mp4)
+![Raxan Employee Directory](RaxanEmployeeDirPreview.mp4)
 
 
 ## Built with
